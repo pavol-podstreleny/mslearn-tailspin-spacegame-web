@@ -49,8 +49,7 @@ steps:
     displayName: "Run project in background"
     inputs:
       targetType: inline
-      script: |
-        Start-Process powershell -ArgumentList "-NoProfile", "-NonInteractive", "-NoExit", {dotnet run}
+      script: "Start-Process powershell -ArgumentList "-NoProfile", "-NonInteractive", "-NoExit", {Write-Host  "lol"}"
     
   - task: DotNetCoreCLI@2
     displayName: "Run the project - $(buildConfiguration)"
