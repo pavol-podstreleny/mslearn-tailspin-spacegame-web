@@ -46,6 +46,7 @@ steps:
       projects: "**/*.csproj"
   - task: DotNetCoreCLI@2
     displayName: "Run the project - $(buildConfiguration)"
+    timeoutInMinutes: 1
     inputs:
       command: "run"
       projects: "**/*.csproj"
